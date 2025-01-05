@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "2146652a-1f23-49ee-85cf-4dfa6a43270b",
+		"name": "Transaction API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22576490"
+	},
+	"item": [
+		{
+			"name": "Get User by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/users/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "677a62213203ed1dd6e9904a"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Succesful response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "677a62213203ed1dd6e9904a"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jan 2025 15:35:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "77"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "8fd489ef7adfa760-DEL"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"55-/Wa+2wH4dNogWo6lTibfD6Ank1E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "rndr-id",
+							"value": "996b30c4-7ef4-4de0"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"677a62213203ed1dd6e9904a\",\n    \"name\": \"User 3\",\n    \"phoneNumber\": \"9111236413\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/users/:id/transactions?status=success&type=credit&fromDate=2024-01-01&toDate=2024-01-31&page=1&limit=10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						":id",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "success"
+						},
+						{
+							"key": "type",
+							"value": "credit"
+						},
+						{
+							"key": "fromDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "toDate",
+							"value": "2024-01-31"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "677a62213203ed1dd6e99048"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/:id/transactions?status=success",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "success"
+								},
+								{
+									"key": "type",
+									"value": "credit",
+									"disabled": true
+								},
+								{
+									"key": "fromDate",
+									"value": "2024-01-01",
+									"disabled": true
+								},
+								{
+									"key": "toDate",
+									"value": "2024-01-31",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "677a62213203ed1dd6e99048"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jan 2025 15:38:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "206"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "8fd48dd0bfcca760-DEL"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13f-y6iCDNq1HQRA9jwX5OpyWhQEBKg\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "rndr-id",
+							"value": "272d1ef7-45b0-4c73"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"_id\": \"677a62213203ed1dd6e99055\",\n            \"status\": \"success\",\n            \"type\": \"debit\",\n            \"transactionDate\": \"2024-12-01T10:42:41.680Z\",\n            \"amount\": 7899,\n            \"userId\": \"677a62213203ed1dd6e99048\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99048\",\n                \"name\": \"User 1\",\n                \"phoneNumber\": \"2891568709\",\n                \"__v\": 0\n            }\n        }\n    ],\n    \"pagination\": {\n        \"total\": 1,\n        \"page\": 1,\n        \"pages\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/transactions?status=success&type=credit&fromDate=2024-01-01&toDate=2024-01-31&page=1&limit=10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "success"
+						},
+						{
+							"key": "type",
+							"value": "credit"
+						},
+						{
+							"key": "fromDate",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "toDate",
+							"value": "2024-01-31"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/transactions?type=credit",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "success",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "credit"
+								},
+								{
+									"key": "fromDate",
+									"value": "2024-01-01",
+									"disabled": true
+								},
+								{
+									"key": "toDate",
+									"value": "2024-01-31",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 05 Jan 2025 15:39:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Ray",
+							"value": "8fd48fea38b6a760-DEL"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a99-dokMZaMlGOj3Kifdh6qj+Q7Em9E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "rndr-id",
+							"value": "b26bb6f1-0ad4-462c"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"_id\": \"677a62213203ed1dd6e9907a\",\n            \"status\": \"success\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2025-01-04T10:42:41.681Z\",\n            \"amount\": 9881,\n            \"userId\": \"677a62213203ed1dd6e9904f\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e9904f\",\n                \"name\": \"User 8\",\n                \"phoneNumber\": \"3438304931\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e9905e\",\n            \"status\": \"success\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2025-01-01T10:42:41.680Z\",\n            \"amount\": 8518,\n            \"userId\": \"677a62213203ed1dd6e9904a\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e9904a\",\n                \"name\": \"User 3\",\n                \"phoneNumber\": \"9111236413\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e99064\",\n            \"status\": \"pending\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-30T10:42:41.681Z\",\n            \"amount\": 3623,\n            \"userId\": \"677a62213203ed1dd6e9904b\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e9904b\",\n                \"name\": \"User 4\",\n                \"phoneNumber\": \"8802901835\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e9905a\",\n            \"status\": \"pending\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-29T10:42:41.680Z\",\n            \"amount\": 6167,\n            \"userId\": \"677a62213203ed1dd6e99049\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99049\",\n                \"name\": \"User 2\",\n                \"phoneNumber\": \"6366951396\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e99060\",\n            \"status\": \"failed\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-25T10:42:41.681Z\",\n            \"amount\": 694,\n            \"userId\": \"677a62213203ed1dd6e9904a\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e9904a\",\n                \"name\": \"User 3\",\n                \"phoneNumber\": \"9111236413\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e9907f\",\n            \"status\": \"failed\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-21T10:42:41.681Z\",\n            \"amount\": 3522,\n            \"userId\": \"677a62213203ed1dd6e99050\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99050\",\n                \"name\": \"User 9\",\n                \"phoneNumber\": \"4996544992\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e99080\",\n            \"status\": \"failed\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-19T10:42:41.681Z\",\n            \"amount\": 5585,\n            \"userId\": \"677a62213203ed1dd6e99051\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99051\",\n                \"name\": \"User 10\",\n                \"phoneNumber\": \"7314993471\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e99066\",\n            \"status\": \"pending\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-17T10:42:41.681Z\",\n            \"amount\": 6899,\n            \"userId\": \"677a62213203ed1dd6e9904b\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e9904b\",\n                \"name\": \"User 4\",\n                \"phoneNumber\": \"8802901835\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e99082\",\n            \"status\": \"pending\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-16T10:42:41.681Z\",\n            \"amount\": 5044,\n            \"userId\": \"677a62213203ed1dd6e99051\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99051\",\n                \"name\": \"User 10\",\n                \"phoneNumber\": \"7314993471\",\n                \"__v\": 0\n            }\n        },\n        {\n            \"_id\": \"677a62213203ed1dd6e9907d\",\n            \"status\": \"pending\",\n            \"type\": \"credit\",\n            \"transactionDate\": \"2024-12-15T10:42:41.681Z\",\n            \"amount\": 3535,\n            \"userId\": \"677a62213203ed1dd6e99050\",\n            \"__v\": 0,\n            \"user\": {\n                \"_id\": \"677a62213203ed1dd6e99050\",\n                \"name\": \"User 9\",\n                \"phoneNumber\": \"4996544992\",\n                \"__v\": 0\n            }\n        }\n    ],\n    \"pagination\": {\n        \"total\": 29,\n        \"page\": 1,\n        \"pages\": 3\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000"
+		}
+	]
+}

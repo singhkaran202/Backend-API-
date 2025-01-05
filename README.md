@@ -41,6 +41,23 @@ PORT=3000
 ```bash
 node src/utils/seedData.js
 ```
+5. **Test Endpoints**
+Test each endpoint with different query parameters:
+
+a) Get User:
+```
+GET {{baseUrl}}/api/users/:id
+```
+
+b) Get User Transactions:
+```
+GET {{baseUrl}}/api/users/:id/transactions?status=success&type=credit
+```
+
+c) Get All Transactions:
+```
+GET {{baseUrl}}/api/transactions?fromDate=2024-01-01&toDate=2024-01-31
+```
 
 ## API Documentation
 
@@ -99,4 +116,4 @@ Import the Postman collection from the `postman` directory to test the APIs.
 
 ## Deployment
 
-The application is deployed on [platform-name] and can be accessed at [deployment-url].
+The application is deployed on [Render] and can be accessed at [(https://backend-api-7b6x.onrender.com/)].
